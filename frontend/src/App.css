@@ -1,0 +1,37 @@
+
+/*root es donde declaramos variables CSS globales (como constantes de diseño) */
+:root {
+  --color-fondo: #1a1a1a;          
+  --color-fondo-footer: #111111;   
+  --color-azul: #1a4fa0;          
+  --color-azul-boton: #1e3d6e;     
+  --color-texto: #ffffff;           
+  --color-texto-suave: #cccccc;    
+  --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente principal */
+}
+
+/* Reset básico: eliminamos márgenes y padding que los navegadores agregan por defecto */
+* {
+  margin: 0;           
+  padding: 0;         
+  box-sizing: border-box; /* El padding no agranda el elemento, se incluye en su tamaño */
+}
+
+/* Estilos del cuerpo (body) de la página */
+body {
+  background-color: var(--color-fondo); 
+  color: var(--color-texto);              
+  font-family: var(--fuente-principal);  
+  min-height: 100vh;                     
+}
+
+/* Eliminar el subrayado de todos los enlaces por defecto */
+a {
+  text-decoration: none; /* Sin subrayado */
+  color: inherit;         /* Hereda el color del elemento padre */
+}
+
+img {
+  max-width: 100%; 
+  display: block;  
+}

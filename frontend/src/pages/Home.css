@@ -1,0 +1,123 @@
+.hero {
+  position: relative;              
+  min-height: 90vh;                
+  display: flex;                   
+  align-items: center;            
+  justify-content: center;         
+  background-color: #0d0d0d;       
+
+  
+  background-image:
+    linear-gradient(
+      135deg,                      
+      rgba(0, 0, 0, 0.85) 0%,     
+      rgba(26, 79, 160, 0.3) 100% 
+    );
+  overflow: hidden;                
+  text-align: center;              
+  padding: 80px 20px;              
+}
+
+
+.hero__overlay {
+  position: absolute;       
+  top: 0;                   
+  left: 0;                  
+  width: 100%;             
+  height: 100%;     
+  display: flex ;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 30px 30px; 
+  pointer-events: none;       
+}
+
+.hero__contenido {
+  position: relative; 
+  z-index: 2;         
+  max-width: 700px;  
+}
+
+.hero__etiqueta {
+  display: inline-block;          
+  background-color: rgba(26, 79, 160, 0.3); 
+  border: 1px solid rgba(26, 79, 160, 0.6); 
+  color: #7eb3ff;                 
+  padding: 6px 18px;              
+  border-radius: 20px;            
+  font-size: 0.85rem;            
+  letter-spacing: 1.5px;         
+  text-transform: uppercase;       
+  margin-bottom: 20px;             
+}
+
+/* Título principal del Hero */
+.hero__titulo {
+  font-size: 3.5rem;     
+  font-weight: 900;       
+  line-height: 1.15;    
+  color: #ffffff;        
+  margin-bottom: 20px;  
+  letter-spacing: -1px;  
+}
+
+.hero__titulo--azul {
+  color: #4a90e2; 
+}
+
+.hero__descripcion {
+  font-size: 1.1rem;      
+  color: #aaaaaa;        
+  line-height: 1.7;       
+  margin-bottom: 35px;    
+  max-width: 550px;        
+  margin-left: auto;       
+  margin-right: auto;
+}
+
+/* Contenedor de los botones */
+.hero__botones {
+  display: flex;        
+  gap: 16px;            
+  justify-content: center; 
+  flex-wrap: wrap;     
+}
+
+/* Estilos base para ambos botones */
+.hero__boton {
+  padding: 14px 32px;         
+  border-radius: 50px;         
+  font-size: 0.95rem;          
+  font-weight: 600;             
+  cursor: pointer;              
+  transition: all 0.3s ease;   
+  letter-spacing: 0.5px;       
+}
+
+/* Botón principal: sólido con fondo azul */
+.hero__boton--principal {
+  background-color: #1e3d6e; 
+  color: #ffffff;              
+  border: 2px solid #1e3d6e;  
+}
+
+
+.hero__boton--principal:hover {
+  background-color: #2a56a0; 
+  border-color: #2a56a0;
+  transform: translateY(-2px); 
+  box-shadow: 0 8px 25px rgba(26, 79, 160, 0.4); 
+}
+
+/* Botón secundario: transparente con borde */
+.hero__boton--secundario {
+  background-color: transparent; 
+  color: #cccccc;                 
+  border: 2px solid #444444;     
+}
+
+/* Hover del botón secundario */
+.hero__boton--secundario:hover {
+  border-color: #ffffff;          
+  color: #ffffff;                 
+  transform: translateY(-2px);    
+}

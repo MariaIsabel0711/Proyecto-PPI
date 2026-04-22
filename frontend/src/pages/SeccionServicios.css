@@ -1,0 +1,66 @@
+/* SeccionServicios.css - Estilos de la sección de servicios */
+
+/* Contenedor principal de la sección */
+.servicios {
+  background-color: #1a1a1a;    /* Fondo oscuro, igual al diseño */
+  padding: 70px 50px;            /* Espacio generoso arriba/abajo y a los lados */
+  display: flex;                 /* Usamos flexbox para organizar el contenido */
+  flex-direction: column;        /* Apila el encabezado y el grid verticalmente */
+  align-items: center;           /* Centra todo horizontalmente */
+}
+
+/* Encabezado de la sección (título + línea decorativa) */
+.servicios__encabezado {
+  text-align: center;   /* Centra el texto */
+  margin-bottom: 50px;  /* Espacio entre el encabezado y las tarjetas */
+}
+
+/* Título de la sección */
+.servicios__titulo-seccion {
+  font-size: 2rem;          /* Tamaño grande pero no tanto como el hero */
+  font-weight: 700;          /* Negrita */
+  color: #ffffff;            /* Blanco */
+  letter-spacing: 1px;      /* Ligero espaciado entre letras */
+  margin-bottom: 12px;      /* Espacio debajo antes de la línea */
+}
+
+/* Línea decorativa debajo del título de sección */
+.servicios__linea-decorativa {
+  width: 60px;                  /* Ancho fijo de la línea */
+  height: 3px;                  /* Altura de la línea */
+  background-color: #1a4fa0;    /* Color azul corporativo */
+  margin: 0 auto;               /* Centrada horizontalmente */
+  border-radius: 2px;           /* Bordes ligeramente redondeados */
+}
+
+/* Grid (cuadrícula) que contiene las 3 tarjetas */
+.servicios__grid {
+  display: flex;        /* Ponemos las tarjetas en fila */
+  flex-wrap: wrap;      /* Si no caben en una fila, saltan a la siguiente */
+  gap: 40px;            /* Espacio entre tarjetas */
+  justify-content: center; /* Centramos las tarjetas */
+  max-width: 1200px;    /* Ancho máximo del contenedor */
+  width: 100%;          /* Ocupa todo el ancho disponible */
+}
+
+/* Diseño responsivo: en pantallas medianas, 2 tarjetas por fila */
+@media (max-width: 900px) {
+  .servicios {
+    padding: 50px 30px; /* Reducimos el padding en pantallas más pequeñas */
+  }
+
+  .servicios__grid {
+    gap: 30px; /* Reducimos el espacio entre tarjetas */
+  }
+}
+
+/* Diseño responsivo: en pantallas pequeñas (móvil), 1 tarjeta por fila */
+@media (max-width: 600px) {
+  .servicios {
+    padding: 40px 20px; /* Aún menos padding en móviles */
+  }
+
+  .servicios__titulo-seccion {
+    font-size: 1.5rem; /* Título más pequeño en móvil */
+  }
+}

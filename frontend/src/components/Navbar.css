@@ -1,0 +1,144 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 50px;
+  background-color: #111111;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+/* Logo */
+.navbar__logo {
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.navbar__logo--azul {
+  color: #1a4fa0;
+}
+
+.navbar__logo--blanco {
+  color: #ffffff;
+}
+
+/* Links de navegación */
+.navbar__links {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.navbar__link {
+  color: #cccccc;
+  font-size: 0.95rem;
+  font-weight: 400;
+  transition: color 0.3s ease;
+  position: relative;
+  text-decoration: none;
+}
+
+/* Subrayado animado */
+.navbar__link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #1a4fa0;
+  transition: width 0.3s ease;
+}
+
+.navbar__link:hover {
+  color: #ffffff;
+}
+
+.navbar__link:hover::after {
+  width: 100%;
+}
+
+/* ===== BOTONES DE AUTH ===== */
+.navbar__auth {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Botón "Iniciar sesión" — outline */
+.navbar__btn-login {
+  padding: 9px 22px;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  color: #cccccc;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  transition: border-color 0.25s, color 0.25s, background 0.25s;
+  background: transparent;
+}
+
+.navbar__btn-login:hover {
+  border-color: #1a4fa0;
+  color: #ffffff;
+  background: rgba(26, 79, 160, 0.08);
+}
+
+/* Botón "Registrarse" — relleno azul */
+.navbar__btn-register {
+  padding: 9px 22px;
+  background: #1a4fa0;
+  border: 1px solid #1a4fa0;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.25s, box-shadow 0.25s, transform 0.15s;
+}
+
+.navbar__btn-register:hover {
+  background: #2560c0;
+  box-shadow: 0 4px 16px rgba(26, 79, 160, 0.35);
+  transform: translateY(-1px);
+}
+
+.navbar__btn-register:active {
+  transform: translateY(0);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 16px 24px;
+  }
+
+  .navbar__links {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar__links {
+    display: none;
+  }
+
+  .navbar__auth {
+    gap: 8px;
+  }
+
+  .navbar__btn-login,
+  .navbar__btn-register {
+    padding: 8px 14px;
+    font-size: 0.82rem;
+  }
+}

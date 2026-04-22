@@ -1,0 +1,85 @@
+
+/* Contenedor principal de la tarjeta */
+.tarjeta {
+  display: flex;              
+  flex-direction: column;     
+  align-items: center;        
+  text-align: center;         
+  max-width: 380px;           
+  width: 100%;               
+  transition: transform 0.3s ease; 
+}
+
+/* Cuando el mouse pasa sobre la tarjeta, se eleva levemente */
+.tarjeta:hover {
+  transform: translateY(-6px); /* Se mueve 6px hacia arriba */
+}
+
+/* Contenedor de la imagen */
+.tarjeta__imagen-contenedor {
+  width: 100%;                 /* Ancho completo de la tarjeta */
+  height: 240px;               /* Altura fija para todas las imágenes */
+  overflow: hidden;            /* Oculta lo que sobresale del contenedor */
+  border-radius: 8px;          /* Esquinas ligeramente redondeadas */
+  margin-bottom: 24px;         /* Espacio entre imagen y contenido */
+}
+
+/* La imagen dentro del contenedor */
+.tarjeta__imagen {
+  width: 100%;       /* Ocupa todo el ancho del contenedor */
+  height: 100%;      /* Ocupa toda la altura del contenedor */
+  object-fit: cover; /* La imagen cubre el espacio sin deformarse (recorta si es necesario) */
+  transition: transform 0.4s ease; /* Animación para el efecto zoom en hover */
+}
+
+/* Efecto zoom en la imagen cuando el mouse pasa sobre la tarjeta */
+.tarjeta:hover .tarjeta__imagen {
+  transform: scale(1.05); /* La imagen crece un 5% (efecto zoom suave) */
+}
+
+/* Contenedor del texto y botón */
+.tarjeta__cuerpo {
+  display: flex;           /* Flexbox para alinear contenido verticalmente */
+  flex-direction: column;  /* Apila verticalmente: título → descripción → botón */
+  align-items: center;     /* Centra horizontalmente */
+  gap: 14px;               /* Espacio entre título, descripción y botón */
+  padding: 0 10px;         /* Un poco de espacio a los lados */
+}
+
+/* Título del servicio */
+.tarjeta__titulo {
+  font-size: 1.5rem;       /* Tamaño grande */
+  font-style: italic;       /* En cursiva, como en el diseño original */
+  font-weight: 700;         /* Negrita */
+  color: #ffffff;           /* Texto blanco */
+  line-height: 1.3;         /* Espacio entre líneas */
+}
+
+/* Descripción del servicio */
+.tarjeta__descripcion {
+  font-size: 0.95rem;       /* Tamaño ligeramente pequeño */
+  font-style: italic;        /* También en cursiva como el diseño */
+  color: #cccccc;            /* Gris claro */
+  line-height: 1.6;          /* Espaciado generoso entre líneas */
+  min-height: 50px;          /* Altura mínima para que todas las tarjetas tengan el mismo alto */
+}
+
+/* Botón "Leer más" */
+.tarjeta__boton {
+  background-color: #1e3d6e;    /* Fondo azul oscuro */
+  color: #ffffff;                /* Texto blanco */
+  border: none;                  /* Sin borde */
+  border-radius: 50px;           /* Bordes completamente redondeados (forma de píldora) */
+  padding: 14px 55px;            /* Espacio interno generoso */
+  font-size: 1rem;               /* Tamaño normal */
+  font-weight: 600;               /* Semi-negrita */
+  cursor: pointer;               /* Cursor de manito */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Animaciones suaves */
+  margin-top: 8px;               /* Pequeño espacio extra encima del botón */
+}
+
+/* Efecto hover del botón */
+.tarjeta__boton:hover {
+  background-color: #2a56a0; /* Azul más brillante al pasar el mouse */
+  transform: scale(1.03);     /* Crece ligeramente */
+}
